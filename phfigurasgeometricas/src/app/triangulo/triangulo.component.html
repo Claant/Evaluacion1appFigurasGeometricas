@@ -1,0 +1,73 @@
+<ion-list lines="none">
+
+<ion-card><!-- tarjeta para mostrar contenido diverso-->
+
+<ion-card-header><!--encabezado-->
+
+<ion-card-title>Triangulo</ion-card-title><!--titulo-->
+<ion-card-subtitle>Perimetro</ion-card-subtitle><!--subitutlo-->
+
+<ion-card-content>
+El perimetro de un triangulo es la suma de las longitudes de sus tres lados.
+En otras palabras, es la medida total del contorno o borde del triangulo.
+</ion-card-content>
+
+<ion-img  src="assets/img/trianguloEscaleno.jpg" style="width: 350px; height: 350px"></ion-img> <!--ubicacion imagen-->
+
+</ion-card-header>
+
+
+</ion-card>
+
+
+
+<ion-item>
+
+<form> <!--formulario-->
+
+<ion-item>
+<ion-input
+label="Lado A(cm)"
+[(ngModel)]="txtLadoA"
+label-placement="floating"
+fill="solid"
+name="ladoA"
+placeholder="Ingrese el radio"/>
+</ion-item>
+
+
+
+<ion-item>
+<ion-input
+label="Lado B(cm)"
+[(ngModel)]="txtLadoB"
+label-placement="floating"
+fill="solid"
+name="ladoB"
+placeholder="Ingrese el radio"/>
+</ion-item>
+
+
+
+<ion-item>
+<ion-input
+label="Lado C(cm)"
+[(ngModel)]="txtLadoC"
+label-placement="floating"
+fill="solid"
+name="ladoC"
+placeholder="Ingrese el radio"/>
+</ion-item>
+
+</form>
+</ion-item>
+
+<ion-item>
+  <ion-button (click)="calcularPerimetroTrianguloEscaleno()">CALCULAR PERIMETRO</ion-button>
+</ion-item>
+
+<ion-item>
+<ion-text >{{resultado}}</ion-text>
+</ion-item>
+
+</ion-list>
